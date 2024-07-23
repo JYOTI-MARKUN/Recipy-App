@@ -103,7 +103,7 @@ function computer_choice(){
         })
 
 btn.addEventListener("click",()=>{
-    document.location.href = "http://127.0.0.1:3002/start.html"
+    document.location.href = "http://127.0.0.1:3002/index.html"
 })
 
 
