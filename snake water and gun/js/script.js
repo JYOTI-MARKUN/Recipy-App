@@ -34,7 +34,7 @@ function computer_choice(){
         // game logic
         if(computerChoice === userChoice){
             console.log("game Draw");
-            roundWinner = "No-one as it is a Draw"
+            roundWinner = "No-one, it is a Draw"
         }else
         {
          if(userChoice === "snake")
@@ -77,8 +77,12 @@ function computer_choice(){
        
         }
         console.log(user_score);
-         console.log(comp_score);
-         round_winner.innerText = `Winner of this ${current_round} rounds is ${roundWinner}`
+         console.log(comp_score);     
+         console.log(comp_choice);     
+         console.log(user_choice);     
+         
+
+         round_winner.innerText = `Winner of ${round} round is ${roundWinner} as you chooses ${userChoice} and computer chooses ${computerChoice}`
          current_round++;
       
 
