@@ -17,6 +17,30 @@
     
 }
 
+.game-des{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ max-width: 1540px;
+ margin: 20px;
+
+
+}
+
+.game-des p{
+    width: 100%;
+    padding: 2px;
+    background-color: rgb(24, 40, 92);
+    border: 2px solid black;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+}
+
+
+
 button{
     background-color: green;
     text-align: center;
@@ -28,7 +52,7 @@ button{
     border-radius: 8px;
     border: none;
     font-size: 16px;
-    margin-top: 280px;
+    margin-top: 170px;
     
 }
 
@@ -51,6 +75,15 @@ footer{
         
         font-weight: 800;
         font-size: 32px;
+    }
+     
+    button{
+        margin-top: 100px;
+    }
+    .game-des p{
+        padding: 10px;
+        font-size: 12px;
+        
     }
 
 }

@@ -39,7 +39,7 @@ img{
     width: 500px;    
     text-align: center;
     align-self: center; 
-   background-color: rgb(3, 16, 60);
+   background-color: rgb(24, 40, 92);
    border-radius: 8px;
    color: white;
     font-weight: 400;
@@ -91,19 +91,25 @@ footer{
     font-size: 8px; 
    };
 
+#para{
+    display: inline-block;
+    margin-top: 80px;  
+}
+
+.game-result{
+    display: inline-block;
+    margin-top: 10px;
+}
 
    .winnerpara, .resultpara {
     text-align: center;
-    margin: auto;
+  
 }
 
    #para, .game-result{   
-    width: 200px;
-    font-weight: 200;
+    width: 200px;  
     font-size: 12px;
-    font-weight: 800;
-     margin: 3px;
-   
+    font-weight: 800;   
 }
 
 
