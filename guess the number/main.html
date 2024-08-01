@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="style/app.css">
+    <script src="js/main.js" defer></script>   
+</head>
+<body>
+    <header><h1>Guess The Number</h1></header> 
+    <div  class="card  game-container">
+        <p>Choose a Number between 1-100 and Enter below</p>
+        <input class="input-number" type="text" placeholder="Enter Number here">
+        <button class="btn">Guess</button>
+        <p class="para">No. Of Guesses : <span class="no-guess"></span> </p>
+        <p class="guess">Guessed Number is : <span class="guess-number"></span> </p>
+      <p class="result-para">  <span class="result-button"></span></p>
+    </div>
+    <div class="card end-game win-container">
+      <div class="button-div">
+        <button class="restart">Play Again</button>
+        <button class="end">Quit</button>
+      </div>
+        <div class="result">
+            <p>Congratulations!!</p>
+            <p>The number was : <span class="actual-num"> 5 </span></p>
+            <p>You guessed the number in : <span class="number-guessed-in"> 10 </span></p>
+        </div>
+    </div>
+    <footer>
+        Made with ❤️ by Jyoti Markun
+    </footer>
+</body>
+</html>
