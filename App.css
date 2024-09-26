@@ -82,14 +82,17 @@ h1 {
 
 .recipe-cards img{
 width: 300px;
+background-size: cover;
 border-radius: 4px;
 }
 
 .recipe-name{
     font-size: 20px;
+    word-wrap: auto;
 }
 .recipe-content button{
     font-size: 16px;
+    font-weight: 800;
     border-radius: 18px;
     border: none;
     background-color: greenyellow;
