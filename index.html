@@ -1,13 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="App.css" />
+    <script src="app.js"></script>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <body class="dark">
+    <div class="header">
+      <h1>What you Wanna Cook Today ?</h1>
+      <div class="mode-content">
+        <img class="mode-icon" src="images/moon-regular.svg" alt="moon" />
+        <p class="mode">Dark Mode</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="search-container">
+        <span
+          ><img class="mg-glass" src="images/magnifying-glass-solid.svg" alt=""
+        /></span>
+        <input type="text" placeholder="Search for Recipe" />
+      </div>
+      <div class="recipe-cards">
+        <div class="recipe-content">
+          <img src="images/ivan-torres-MQUqbmszGGM-unsplash.jpg" alt="" />
+          <p>Name</p>
+          <button>Get Recipe</button>
+        </div>
+        <div class="recipe-content">
+          <img src="images/ivan-torres-MQUqbmszGGM-unsplash.jpg" alt="" />
+          <p class="recipe-name">Name</p>
+          <button>Get Recipe</button>
+        </div>
+        <div class="recipe-content">
+          <img src="images/ivan-torres-MQUqbmszGGM-unsplash.jpg" alt="" />
+          <p>Name</p>
+          <button>Get Recipe</button>
+        </div>
+        <div class="recipe-content">
+          <img src="images/ivan-torres-MQUqbmszGGM-unsplash.jpg" alt="" />
+          <p>Name</p>
+          <button>Get Recipe</button>
+        </div>
+        <div class="recipe-content">
+          <img src="images/ivan-torres-MQUqbmszGGM-unsplash.jpg" alt="" />
+          <p>Name</p>
+          <button>Get Recipe</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
