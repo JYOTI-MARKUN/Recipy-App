@@ -1,37 +1,73 @@
-const recipeCard = document.querySelector(".recipe-cards")
+const recipeCard = document.querySelector(".recipe-cards");
+const userInput = document.querySelector(".indgredient-clinput");
+let recipe = "cake";
+let url;
+
+// get the userInput and search the recipe according to userInput
+userInputValue = userInput.addEventListener("input", (e) => {
+  recipe = e.target.value ;
+  url = `https://api.edamam.com/search?q=${recipe}&app_id=46054457&app_key=f1b3cee9d7ca6262daf657a2c7d31a5a&from=0&to=100`;
+  response(url);
+});
+
+async function response(url) {
+  const result = await fetch(url);
+  const data = await result.json();
+  const output = data.hits;
+  console.log(output[0]); 
+  console.log(output[0].recipe.totalNutrients.CA);
+  recipeCard.innerHTML = "";
 
 
+  // get very recipe data
+  output.forEach((recipe) => {
+    const ingredients = recipe.recipe.ingredients;
+    // console.log(ingredients[0].text)
+    // ingredients.forEach((ingredient)=>{
+    //     console.log(ingredient.text)
+    // })
 
-const url = "https://api.edamam.com/search?q=pizza&app_id=46054457&app_key=f1b3cee9d7ca6262daf657a2c7d31a5a&from=0&to=100";
-async function response (){
-    const result = await fetch(url)
-    const data = await result.json()
-    const output = data.hits
- 
- 
-    output.forEach((recipe)=>{     
-        let recipeImage = recipe.recipe.image;
-       // creating outerdiv for each recipe and adding class in it
-        const innerdiv = document.createElement("div")
-        innerdiv.classList.add("recipe-content")
-        // creating recipe image  
+    let recipeImage = recipe.recipe.image;
+    // creating outerdiv for each recipe and adding class in it
+    const innerTag = document.createElement("a");
+    innerTag.classList.add("recipe-content");
+    innerTag.href = `/recipe.html?name=${recipe.recipe.label}`
 
-        const image = document.createElement("img")
-        image.src = recipeImage
+    // creating recipe image
+    const image = document.createElement("img");
+    image.src = recipeImage;
 
-        // creating para to store name of recipe
-        const para = document.createElement("p");
-        para.innerText = recipe.recipe.label;
+    // creating para to store name of recipe
+    const para = document.createElement("p");
+    para.innerText = recipe.recipe.label;
 
-       // creaing button to get to that percular recipe on clicking it
-        const btn = document.createElement("button")
-        btn.innerText = "Get Recipe"
-        innerdiv.appendChild(image)
-        innerdiv.appendChild(para)
-        innerdiv.appendChild(btn)
-        recipeCard.appendChild(innerdiv)
+    // creting para2 to store calories details
+    const calPara = document.createElement("p");
+    calPara.classList.add("calpara")
+    calPara.innerText = `Calories Details: ${Math.floor(recipe.recipe.calories)}`;
+
+    // creaing button to get to that percular recipe on clicking it
+    const btn = document.createElement("button");
+    btn.innerText = "Get Recipe";
+     
+    // event listner on the button to get the ingredient of a perticular recipe
+    btn.addEventListener("Click",(e)=>{
+            console.log("clicked")
+            window.location.href= `recipe.html?recipe=${recipe.recipe.label}`
     })
 
+    innerTag.appendChild(image);
+    innerTag.appendChild(para);
+    innerTag.appendChild(calPara);
+    innerTag.appendChild(btn);
+    recipeCard.appendChild(innerTag);
+
+
+
+    
+  });
 }
 
-response()
+response(
+  `https://api.edamam.com/search?q=${recipe}&app_id=46054457&app_key=f1b3cee9d7ca6262daf657a2c7d31a5a&from=0&to=100`
+);

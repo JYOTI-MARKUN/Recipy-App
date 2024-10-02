@@ -74,23 +74,35 @@ h1 {
 
 }
 .recipe-content{
+    width: 250px;
     background-color: antiquewhite;
     text-align: center;
     border-radius: 4px;
+    text-decoration: none;
+    color: black;
     padding-bottom: 20px;
 }
 
 .recipe-cards img{
-width: 300px;
+width: 250px;
 background-size: cover;
+background-position:center;
 border-radius: 4px;
 }
 
 .recipe-name{
     font-size: 20px;
-    word-wrap: auto;
+    font-weight: 800;
+   
 }
+
+.calpara{
+  font-size:12px;
+  font-weight: 800;
+}
+
 .recipe-content button{
+  margin-top: 10px;
     font-size: 16px;
     font-weight: 800;
     border-radius: 18px;

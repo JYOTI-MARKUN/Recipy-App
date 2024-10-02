@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito";
+  }
+  
+  body .dark {
+    --background-color: hsl(207, 26%, 17%);
+    --text-color: white;
+    --element-color: hsl(209, 23%, 22%);
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  body {
+    --background-color: white;
+    --text-color: black;
+    --element-color: white;
+  }
+  
+  .header {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--element-color);
+    color: var(black);
+    box-shadow: 0 0px 4px 4px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    margin-left: 60px;
+    margin-block: 10px;
+  }
+  
+  .mode-content {
+    display: flex;
+    margin-right: 60px;
+    margin-block: 10px;
+  }
+  
+  .mode-icon {
+    width: 20px;
+    margin-right: 5px;
+  }
+  
+  .mode {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 6px;
+  }
+
+  .back-btn{
+    margin-left: 65px;
+    font-weight: 600;
+    color: black;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+     background-color: rgb(211, 204, 204);     
+  }
+
+.recipe-content{
+   margin-top: 40px;  
+   display: flex;
+}
+
+  .recipe-img{
+    width:400px;
+    margin-left: 65px;
+    margin-right: 25px;
+  }
+
+  .recipe-name{
+    font-size: 25px;
+  }
+
+
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 20px;
+      margin-left: 20px;
+    }
+  
+    .mode-icon {
+      width: 16px;
+    }
+    .mode-content {
+      margin-right: 20px;
+    }
+    .mode {
+      font-size: 18px;
+      margin-top: 2px;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    h1 {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  
+    .mode-icon {
+      width: 14px;
+    }
+  
+    .mode-content {
+      margin-right: 10px;
+    }
+    .mode {
+      font-size: 16px;
+    }
+  }
