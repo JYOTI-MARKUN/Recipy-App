@@ -36,6 +36,7 @@ async function response(url) {
     // creating recipe image
     const image = document.createElement("img");
     image.src = recipeImage;
+    // console.log(image.src)
 
     // creating para to store name of recipe
     const para = document.createElement("p");

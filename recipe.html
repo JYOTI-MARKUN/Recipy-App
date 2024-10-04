@@ -6,7 +6,7 @@
     <title>Recipe App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="recipe.css" />
-    <script src="recipe.js"></script>
+    <script src="recipe.js" defer></script>
   </head>
   <body>
     <div class="header">
@@ -17,8 +17,11 @@
       </div>
     </div>
     <a href="#" class="back-btn" onclick="history.back()"><i class="fa-solid fa-arrow-left"></i> &nbsp;Back</a>
+
     <div class="recipe-content">
-      <img class="recipe-img" src="images/ivan-torres-MQUqbmszGGM-unsplash.jpg" alt="" />
+      <div class="img-div">
+        <img class="recipe-img" src="" alt="" />
+      </div>
       <div class="recipe-detail">
         <p class="recipe-name">name</p>
         <div class="ingredient-detail">ingredient-detail</div>
