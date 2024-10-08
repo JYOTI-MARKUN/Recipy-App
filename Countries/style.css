@@ -12,6 +12,7 @@ body{
    background-color: var(--background-color);
    color: var(--text-color);  
 }
+
 body.dark {
     --background-color : hsl(207, 26%, 17%);
     --text-color : white;

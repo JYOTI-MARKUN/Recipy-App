@@ -5,15 +5,15 @@
     color: white;
 font-family: "ROBOTO";
 }
-body{
+
+
+.container{
    display: flex;
    justify-content: center;
    flex-direction: column;
    align-items: center;
-
+   height: 100vh;
 }
-
-
 
 .all-content{
 background: linear-gradient(135deg, #00feba, #5b548a);
@@ -98,9 +98,6 @@ transform: translate(-50%,-50%);
     padding: 20px;
 }
 
-
-
-
 .imageicon{
     width:50px
 }
@@ -108,7 +105,10 @@ transform: translate(-50%,-50%);
 footer{
     margin-bottom: 10px;
     font-size: 12px;
+    text-align: center;
 }
+
+
 
 
 @media (max-width:1040px){
@@ -213,13 +213,10 @@ footer{
     .humid-value,.Wind-value,.para-text{
         font-size: 10px;
     }
-
-
     
     footer{
         margin-bottom: 10px;
         font-size: 10px;
-    }
-    
+    }   
     
     }
