@@ -1,7 +1,25 @@
 const recipeCard = document.querySelector(".recipe-cards");
 const userInput = document.querySelector(".indgredient-clinput");
+const theme = document.querySelector(".change-theme");
+
 let recipe = "cake";
 let url;
+
+
+// toggle between light and dark mode
+theme.addEventListener("click",()=>{
+  document.body.classList.toggle("dark")
+  console.log("i am clicked")
+
+  if(document.body.classList.contains("dark")){
+    theme.innerHTML = `<i class="fa-regular fa-sun"></i> &nbsp;&nbsp;Light mode`
+  } else{
+    theme.innerHTML = `<i class="fa-regular fa-moon"></i> &nbsp;&nbsp;Dark mode`
+  }
+  
+})
+
+
 
 // get the userInput and search the recipe according to userInput
 userInputValue = userInput.addEventListener("input", (e) => {
@@ -62,9 +80,6 @@ async function response(url) {
     innerTag.appendChild(calPara);
     innerTag.appendChild(btn);
     recipeCard.appendChild(innerTag);
-
-
-
     
   });
 }

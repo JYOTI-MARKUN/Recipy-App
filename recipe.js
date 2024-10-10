@@ -4,7 +4,21 @@ const recipeName = document.querySelector(".recipe-name");
 const ingredientDetails = document.querySelector(".ingredient-detail");
 const nutritionDetails = document.querySelector(".nutrition-detail");
 const recipe = new URLSearchParams(location.search).get("name") ;
+const theme = document.querySelector(".change-theme");
 
+
+// toggle between light and dark mode
+theme.addEventListener("click",()=>{
+    document.body.classList.toggle("dark")
+    console.log("i am clicked")
+  
+    if(document.body.classList.contains("dark")){
+      theme.innerHTML = `<i class="fa-regular fa-sun"></i> &nbsp;&nbsp;Light mode`
+    } else{
+      theme.innerHTML = `<i class="fa-regular fa-moon"></i> &nbsp;&nbsp;Dark mode`
+    }
+    
+  })
 
 
 async function recipeInfo(){
@@ -22,12 +36,12 @@ async function recipeInfo(){
     recipeImage.src = output.hits[0].recipe.image
     recipeName.innerText = `Name : ${allData.label}`
    
-    ingredientDetails.innerHTML = `Ingredients <b>: </b> <br>${allData.ingredientLines.map((ingredientLine, index) => {
+    ingredientDetails.innerHTML = `  ${allData.ingredientLines.map((ingredientLine, index) => {
         return `${index + 1}. ${ingredientLine}`; // Properly format each line
     }).join('<br>')}`
 
 
-    nutritionDetails.innerHTML = `Nutrition Details <b>:</b> <br>${ allNutrition}`
+    nutritionDetails.innerHTML = ` ${ allNutrition}`
  
 }
 
