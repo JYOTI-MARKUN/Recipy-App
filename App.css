@@ -45,7 +45,7 @@
 
 
   .container{
-      max-width: 1400px;
+      max-width: 1440px;
       margin-block: 25px;
       
   }
@@ -72,11 +72,12 @@
 
   .recipe-cards {
       display: flex;
-      margin: auto;   
+    
+      margin:  auto;   
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 40px;
+      gap: 50px;
 
   }
   .recipe-content{

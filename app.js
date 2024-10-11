@@ -39,12 +39,7 @@ async function response(url) {
 
   // get very recipe data
   output.forEach((recipe) => {
-    const ingredients = recipe.recipe.ingredients;
-    // console.log(ingredients[0].text)
-    // ingredients.forEach((ingredient)=>{
-    //     console.log(ingredient.text)
-    // })
-
+   
     let recipeImage = recipe.recipe.image;
     // creating outerdiv for each recipe and adding class in it
     const innerTag = document.createElement("a");
@@ -54,7 +49,7 @@ async function response(url) {
     // creating recipe image
     const image = document.createElement("img");
     image.src = recipeImage;
-    // console.log(image.src)
+  
 
     // creating para to store name of recipe
     const para = document.createElement("p");

@@ -106,7 +106,8 @@
     }
 
 
-    .recipe-img{   
+    .recipe-img{  
+      width: 300px; 
       margin-top: 20px;
     margin-left: 40px; 
     }
@@ -134,7 +135,7 @@
     }
   }
   
-  @media (max-width: 450px) {
+  @media (max-width: 550px) {
 
     h1 {
       font-size: 16px;
