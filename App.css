@@ -78,8 +78,7 @@
     border: none;
     outline: none;
     background-color: var(--background-color);
-
-    
+    color: var(--text-color);    
   }
 
   .recipe-cards {
